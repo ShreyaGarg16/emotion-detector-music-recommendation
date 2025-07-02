@@ -1,0 +1,28 @@
+.mood-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ffe4ec;
+}
+
+.mood-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.mood-images {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.mood-images div {
+  text-align: center;
+}
+
+.mood-images img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
