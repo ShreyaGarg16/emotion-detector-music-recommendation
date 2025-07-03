@@ -1,11 +1,19 @@
+// src/components/LandingPage.js
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./LandingPage.css";
-import MoodCarousel from "./MoodCarousel";  // ✅ Use this instead of MoodCards
+import MoodCarousel from "./MoodCarousel";
 import MusicHealing from "./MusicHealing";
 import About from "./About";
 import Contact from "./Contact";
 
 const LandingPage = () => {
+  const navigate = useNavigate();
+
+  const handleStart = () => {
+    navigate("/detect");
+  };
+
   return (
     <div>
       <nav className="navbar">
@@ -22,20 +30,20 @@ const LandingPage = () => {
         <p>Let music heal you — with just a smile or a frown.</p>
       </section>
 
-      <MoodCarousel />   {/* ✅ Carousel appears here */}
-
+      <MoodCarousel />
       <MusicHealing />
 
       <div className="start-section">
-        <button className="start-btn">Start Now</button>
+        <button className="start-btn" onClick={handleStart}>
+          Start Now
+        </button>
       </div>
 
       <About />
       <Contact />
 
-      <footer className="footer">© 2025 EmotionTune. All rights reserved.</footer>
+      <footer className="footer">© 2025 MoodScanFM. All rights reserved.</footer>
     </div>
   );
 };
-
 export default LandingPage;
